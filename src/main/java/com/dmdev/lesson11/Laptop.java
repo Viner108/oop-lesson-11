@@ -1,6 +1,6 @@
 package com.dmdev.lesson11;
 
-public class Laptop extends Computer{
+public final class Laptop extends Computer{
     private int weight;
     {
         System.out.println("init block laptop");
@@ -15,6 +15,11 @@ public class Laptop extends Computer{
 
     public Laptop() {
         System.out.println("Constructor laptop");
+    }
+
+    @Override
+    public void load() {
+
     }
 
     public void  open(){
