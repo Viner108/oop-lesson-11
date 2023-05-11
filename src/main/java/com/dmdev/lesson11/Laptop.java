@@ -1,14 +1,10 @@
 package com.dmdev.lesson11;
 
-public final class Laptop extends Computer{
+public final class Laptop extends Computer {
     private int weight;
-    {
-        System.out.println("init block laptop");
-    }
-    static {
-        System.out.println("static block laptop");
-    }
-    public Laptop(Ssd ssd, Ram ram,int weight) {
+
+
+    public Laptop(Ssd ssd, Ram ram, int weight) {
         super(ssd, ram);
         this.weight = weight;
     }
@@ -19,10 +15,15 @@ public final class Laptop extends Computer{
 
     @Override
     public void load() {
-
+        open();
+        System.out.println("Я загрузился");
+    }
+    public void print(){
+        super.print();
+        System.out.println("weight: "+weight);;
     }
 
-    public void  open(){
+    public void open() {
         System.out.println("Открыл крышку");
     }
 

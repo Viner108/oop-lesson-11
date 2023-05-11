@@ -5,13 +5,7 @@ public abstract class Computer {
 
     private Ram ram;
 
-    {
-        System.out.println("init block computer");
-    }
 
-    static {
-        System.out.println("static block computer");
-    }
 
     public Computer(Ssd ssd, Ram ram) {
         this.ssd = ssd;
@@ -23,10 +17,10 @@ public abstract class Computer {
     }
 
     public abstract void load();
-//    public void load() {
-//        System.out.println("Я загрузился");
-//    }
 
+public void print(){
+    System.out.println("Ssd: "+ssd.getValue()+", ram: " +ram.getValue());
+}
     public Ssd getSsd() {
         return ssd;
     }
